@@ -1,0 +1,86 @@
+MDScreen:
+    MDBoxLayout:
+        orientation : "vertical"
+        MDBoxLayout:
+            AnchorLayout:
+                anchor_y : "top"
+                anchor_x : "left"
+                MDIconButton:
+                    icon : "menu"
+
+
+    MDBoxLayout:
+        size_hint_y : None
+        height : dp(75)
+        ScrollView:
+            MDBoxLayout:
+                TabLabel:
+                    text : "popular"
+                TabLabel:
+                    text : "popular"
+                TabLabel:
+                    text : "popular"
+                TabLabel:
+                    text : "popular"
+
+
+
+
+<TabLabel>@MDLabel>:
+    text : 'location'
+    text_size : None,None
+    adaptive_width : True
+    #adaptive_height : True
+    size_hint_y:None
+    height:dp(50)
+    radius:[20]
+    md_bg_color:1,0,0,1
+
+    MDLabel:
+        text :"island"
+        font_style:"H5"
+        size_hint_y:None
+        height:self.text
+        image:'4.jpeg'
+        MDBoxLayout:
+            padding:dp(5)
+            size_hint_y:None
+            height:dp(75)
+            MDLabel:
+                text:"Top Destinations"
+                font_style:'H6'
+                pos_hint:{'center_y':.5}
+                adaptive_height:True
+        MDBoxLayout:
+            size_hint_y:None
+            height:dp(110)
+            padding:[dp(5),dp(5),dp(5),dp(10)]
+            ScrollView:
+                bar_width:0
+                MDBoxLayout:
+                    adaptive_width:True
+                    spacing:dp(20)
+                    padding:dp(5)
+                    BottomCard:
+                        image:'1.jpg'
+
+
+
+    MDBoxLayout:
+        orientatin : "vertical"
+        MDAnchorLayout:
+            anchor_x:left
+            anchor_y:bottom
+            One_List_Icon:
+                icon:"chevron-down"
+
+            Image:
+                image:"1.jpg"
+
+            MDLabel:
+                text:"Let's , Uncover the world"
+                md_bg_color : "blue"
+                size_hint :{"center_y":0.5,"center_x":0.5}
+
+
+

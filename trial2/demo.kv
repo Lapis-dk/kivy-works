@@ -1,0 +1,72 @@
+MDBoxLayout:
+    orientation : "vertical"
+    pos_hint : {"center_y" : 0.46}
+    padding : 15
+    spacing : 5
+    MDGridLayout:
+        cols : 2
+        spacing : 12
+        MDLabel:
+            text:"Instruction Id"
+        MDLabel:
+            text:"Admin Id"
+
+        MDTextField:
+            hint_text : "UDI326400"
+
+        MDTextField:
+            hint_text : "UDI326400"
+            #helper_text : "UDI326400"
+            #helper_text_mode: "on_focus"
+
+        MDLabel:
+            text:"Student Id"
+        MDLabel:
+            text:"Course"
+
+        MDTextField:
+            hint_text : "UDI326400"
+
+        MDTextField:
+            hint_text : "EX:cse.."
+            icon_right: "arrow-down-drop-circle-outline"
+            icon_right_color: app.theme_cls.primary_color
+
+        MDLabel:
+            text:"Stream"
+        MDLabel:
+            text:"Total Fee"
+
+
+        MDTextField:
+            id: drop_item
+            text: 'Select'
+            icon_right: "arrow-down-drop-circle-outline"
+            icon_right_color: app.theme_cls.primary_color
+            on_focus: app.on_text(self)
+
+        MDTextField:
+            hint_text : "enter"
+
+        MDLabel:
+            text:"Calendar Year"
+        MDLabel:
+            text:"Concession %"
+
+        MDTextField:
+            hint_text : "enter"
+        MDTextField:
+            hint_text : "enter"
+
+    MDBoxLayout :
+        orientation : "vertical"
+        MDLabel:
+            text : "Reason"
+            size_hint: 1, None
+            height: "30dp"
+
+    MDTextFieldRect:
+        size_hint: 1, None
+        height: "80dp"
+
+    MDLabel:

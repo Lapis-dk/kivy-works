@@ -1,0 +1,151 @@
+
+MDBoxLayout:
+    orientation: "vertical"
+    MDBoxLayout:
+        orientation: "vertical"
+        size_hint_y: 0.05
+        md_bg_color: "#0492C2"
+        padding: 0, 0,0,"38dp"
+        MDGridLayout:
+            cols: 2
+            MDIconButton:
+                icon: "arrow-left"
+                icon_size: "20dp"
+                theme_icon_color: "Custom"
+                icon_color: 1,1,1,1
+                pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+            MDLabel:
+                text: "Fee screen"
+                theme_text_color: "Custom"
+                text_color: "#FFFFFF"
+                pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+    MDBoxLayout:
+        id: main_card
+        size_hint: 1, 0.8
+        md_bg_color: "white"
+        MDBoxLayout:
+            orientation: "vertical"
+            size:  1,1
+            padding: "10dp", "10dp", "10dp", 0
+            md_bg_color: "white"
+            MDGridLayout:
+                cols : 2
+                spacing : 12
+                MDLabel:
+                    text:"Instruction Id"
+                MDLabel:
+                    text:"Admin Id"
+
+                MDTextField:
+                    mode: 'rectangle'
+                    text : "UDI326400"
+                    line_color_normal: "#0492C2"
+
+
+
+                MDTextField:
+                    mode: 'rectangle'
+                    text : "UDI326400"
+                    line_color_normal: "#0492C2"
+
+                MDLabel:
+                    text:"Student Id"
+                MDLabel:
+                    text:"Course"
+
+                MDTextField:
+                    mode: 'rectangle'
+                    line_color_normal: "#0492C2"
+
+                MDTextField:
+                    mode: 'rectangle'
+                    line_color_normal: "#0492C2"
+                    icon_right: "arrow-down-drop-circle-outline"
+                    icon_right_color: app.theme_cls.primary_color
+
+                MDLabel:
+                    text:"Stream"
+                MDLabel:
+                    text:"Total Fee"
+
+
+                MDTextField:
+                    id: drop_item
+                    mode: 'rectangle'
+                    line_color_normal: "#0492C2"
+                    icon_right: "arrow-down-drop-circle-outline"
+                    icon_right_color: app.theme_cls.primary_color
+                    on_focus: app.on_text(self)
+
+                MDTextField:
+                    mode: 'rectangle'
+                    line_color_normal: "#0492C2"
+
+                MDLabel:
+                    text:"Calendar Year"
+
+                MDLabel:
+                    text:"Concession %"
+
+                MDTextField:
+                    id:calendar
+                    mode: 'rectangle'
+                    line_color_normal: "#0492C2"
+                    icon_right: "calendar-month"
+                    icon_right_color: app.theme_cls.primary_color
+                    on_focus: app.show_date_picker()
+
+                MDTextField:
+                    mode: 'rectangle'
+                    line_color_normal: "#0492C2"
+
+            MDBoxLayout :
+                orientation : "vertical"
+                MDLabel:
+                    text : "Reason"
+                    size_hint: 1, None
+                    height: "30dp"
+
+            MDTextField:
+                mode: 'rectangle'
+                line_color_normal: "#0492C2"
+                size_hint: 1, None
+                height: "80dp"
+
+            MDLabel:
+
+
+        ###-------------> your code goes here <------------###
+
+
+
+
+
+
+    MDBoxLayout:
+        orientation: "vertical"
+        size_hint_y: 0.05
+        md_bg_color: "#0492C2"
+        MDGridLayout:
+            padding: "2dp",0,"2dp",dp(-3)
+            spacing: root.width/15, dp(-10)
+            cols: 5
+            rows: 1
+            MDLabel:
+                text: "Dash"
+
+            MDLabel:
+
+                text: "Homework"
+
+            MDLabel:
+
+                text: "Reset"
+
+            MDLabel:
+
+                text: "Save"
+
+            MDLabel:
+
+                text: "Menu"

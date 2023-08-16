@@ -1,0 +1,49 @@
+<PongBall>:
+    size:50,50
+    canvas:
+        Ellipse:
+            pos : self.pos
+            size:self.size
+
+<Paddle>:
+    size:25,200 #here inside canvas the size the values changes dynamically hence we declare the values outside so it remains static
+    canvas:
+        Rectangle:
+            pos:self.pos
+            size:self.size
+
+<PongGame>:
+    ball : pong_ball
+    player1:left_paddle
+    player2:right_paddle
+    canvas:
+        Rectangle:
+            pos : self.center_x-5, 0
+            size: 10,self.height
+
+    Label:
+        font_size :70
+        center_x : root.width/4
+        top:root.top-100
+        text:str(root.player2.score)
+
+    Label:
+        font_size :70
+        center_x : 3*(root.width/4)
+        top:root.top-100
+        text:str(root.player1.score)
+
+    PongBall:
+        id: pong_ball
+        center : self.parent.center
+
+    # pos:(0,root.center_y)  but it updates in run time so no use
+    Paddle:
+        id:left_paddle
+        x :root.x # here it updates dynamically and root.x refers to the intial pos (i.e) 0
+        center_y : root.center_y
+
+    Paddle:
+        id:right_paddle
+        x :root.width-self.width
+        center_y : root.center_y

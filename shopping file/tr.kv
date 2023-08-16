@@ -1,0 +1,26 @@
+MDScreen:
+    MDBoxLayout:
+        orientataion : "vertical"
+        AnchorLayout:
+            anchor_y:"top"
+            anchor_x:"left"
+            MDIconButton:
+                icon:"arrow-left"
+        AnchorLayout:
+            anchor_y:"top"
+            anchor_x:"right"
+            MDBoxLayout:
+                adaptive_size:True
+                MDIconButton:
+                    icon:"magnify"
+                MDIconButton:
+                    icon:"cart"
+
+
+<TabCard@MDCard>:
+    adaptive_height : True
+    radius :dp(15)
+    MDIconButton:
+        icon:root.icon
+    MDLabel:
+        text:root.text
